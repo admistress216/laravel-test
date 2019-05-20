@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'Test@index');
+
+include __DIR__.'/admin/web.php';
