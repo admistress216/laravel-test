@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class EntryController extends Controller
 {
     //
-    public function login(){
+    public function loginForm(){
         return 'abc';
     }
 }
