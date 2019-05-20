@@ -2,7 +2,6 @@
 
 //  /admin/abc
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('abc', function (){
-        return 'anker';
-    });
+    Route::get('login', 'Admin\EntryController@login');
+
 });
