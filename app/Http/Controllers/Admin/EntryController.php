@@ -8,6 +8,11 @@ use Auth;
 
 class EntryController extends Controller
 {
+
+    public function index() {
+        return '后台.....';
+    }
+
     /**
      * 登录视图
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -25,6 +30,10 @@ class EntryController extends Controller
             'password' => $request->input('password'),
         ]);
 
-        dd($status);
+        if ($status) {
+            //登录成功
+            return redirect('/admin/index');
+        }
+        return redirect('/admin/login')->with('error', '用户名或密码错误');
     }
 }
