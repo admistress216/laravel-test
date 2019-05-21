@@ -9,6 +9,12 @@ use Auth;
 class EntryController extends Controller
 {
 
+    public function __construct()
+    {
+        //登录验证中间件排除登录页面
+        $this->middleware('admin.auth')->except(['loginForm', 'login']);
+    }
+
     public function index() {
         return '后台.....';
     }
