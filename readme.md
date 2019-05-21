@@ -18,3 +18,16 @@ factory(App\Model\Admin::class,3)->create(); //利用database/factories/ModelFac
 ```php
 php artisan make:constroller Admin/EntryController
 ```
+
+### 4. 创建中间件
+```php
+php artisan make:middleware AdminMiddleware
+```
+
+### 5.laravel自带Auth总结
+```php
+//返回用户是否登录,登录true,未登录false
+Auth::check()
+//尝试用户登录,登录成功返回true,失败false
+Auth::attempt()
+```
