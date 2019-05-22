@@ -16,7 +16,7 @@ class EntryController extends Controller
     }
 
     public function index() {
-        return '后台.....';
+        return view('admin/entry/index');
     }
 
     /**
@@ -41,5 +41,11 @@ class EntryController extends Controller
             return redirect('/admin/index');
         }
         return redirect('/admin/login')->with('error', '用户名或密码错误');
+    }
+
+    public function logout() {
+        Auth::guard('admin')->logout();
+
+        return redirect('/admin/login');
     }
 }
